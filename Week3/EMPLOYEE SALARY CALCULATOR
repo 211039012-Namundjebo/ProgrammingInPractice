@@ -1,0 +1,53 @@
+#include <stdio.h>
+int main(){
+
+
+    ////EMPLOYEE SALARY CALCULATOR////
+    //Declaring variables
+    float basicSalary;
+    float housing;
+    float transport;
+    float tax;
+    float grossSalary;
+    float netSalary;
+
+    //Prompt user for basic salary
+    printf("Enter basic salary: N$ ");
+    if (scanf("%f", &basicSalary) != 1) {
+        printf("Invalid input.\n");
+        return 1; 
+    }
+
+    //Prompt user for housing allowance
+    printf("Enter hosuing allowance: N$ ");
+    if (scanf("%f", &housing) != 1) {
+        printf("Invalid input.\n");
+        return 1; 
+    }
+
+    //Prompt user for transport allowance
+    printf("Enter transport allowance: N$ ");
+    if (scanf("%f", &transport) != 1) {
+        printf("Invalid input.\n");
+        return 1;
+    }
+
+    //Prompt user for tax
+    printf("Enter tax: N$ ");
+    if (scanf("%f", &tax) != 1) {
+        printf("Invalid input.\n");
+        return 1;
+    }
+
+    //Calculate gross salary
+    grossSalary = basicSalary + housing + transport;
+
+    //Calculate net salary
+    netSalary = grossSalary - tax;
+
+    //Display results
+    printf("Gross Salary: N$ %.2f\n", grossSalary);
+    printf("Net Salary: N$ %.2f\n", netSalary);
+
+    return 0;
+}
