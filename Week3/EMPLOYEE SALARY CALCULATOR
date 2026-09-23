@@ -1,51 +1,51 @@
 #include <stdio.h>
-int main(){
 
+int main() {
 
-    ////EMPLOYEE SALARY CALCULATOR////
-    //Declaring variables
+    // EMPLOYEE SALARY CALCULATOR
+    // Declare variables to store salary details
     float basicSalary;
-    float housing;
-    float transport;
-    float tax;
+    float housingAllowance;
+    float transportAllowance;
+    float taxAmount;
     float grossSalary;
     float netSalary;
 
-    //Prompt user for basic salary
+    // Request the user to enter the basic salary
     printf("Enter basic salary: N$ ");
     if (scanf("%f", &basicSalary) != 1) {
         printf("Invalid input.\n");
         return 1; 
     }
 
-    //Prompt user for housing allowance
-    printf("Enter hosuing allowance: N$ ");
-    if (scanf("%f", &housing) != 1) {
+    // Request the user to enter the housing allowance
+    printf("Enter housing allowance: N$ ");
+    if (scanf("%f", &housingAllowance) != 1) {
         printf("Invalid input.\n");
         return 1; 
     }
 
-    //Prompt user for transport allowance
+    // Request the user to enter the transport allowance
     printf("Enter transport allowance: N$ ");
-    if (scanf("%f", &transport) != 1) {
+    if (scanf("%f", &transportAllowance) != 1) {
         printf("Invalid input.\n");
         return 1;
     }
 
-    //Prompt user for tax
+    // Request the user to enter the tax amount
     printf("Enter tax: N$ ");
-    if (scanf("%f", &tax) != 1) {
+    if (scanf("%f", &taxAmount) != 1) {
         printf("Invalid input.\n");
         return 1;
     }
 
-    //Calculate gross salary
-    grossSalary = basicSalary + housing + transport;
+    // Compute the gross salary
+    grossSalary = basicSalary + housingAllowance + transportAllowance;
 
-    //Calculate net salary
-    netSalary = grossSalary - tax;
+    // Compute the net salary
+    netSalary = grossSalary - taxAmount;
 
-    //Display results
+    // Print the computed salaries
     printf("Gross Salary: N$ %.2f\n", grossSalary);
     printf("Net Salary: N$ %.2f\n", netSalary);
 
