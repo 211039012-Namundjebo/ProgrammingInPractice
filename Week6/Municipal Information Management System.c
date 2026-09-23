@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <string.h>
 
@@ -23,7 +22,7 @@ int main() {
     printf("  PART A: EMPLOYEE SALARIES\n");
     printf("==============================================\n\n");
 
-    // Capture 50 salaries
+    // Input 50 salaries
     for (int i = 0; i < NUM_SALARIES; i++) {
         printf("Enter salary for employee %d: ", i + 1);
         scanf("%f", &salaries[i]);
@@ -35,7 +34,7 @@ int main() {
         printf("Employee %2d: %.2f\n", i + 1, salaries[i]);
     }
 
-    // Calculate total, average, highest, and lowest salaries
+    // Compute total, average, highest, and lowest salaries
     highestSalary = salaries[0];
     lowestSalary = salaries[0];
 
@@ -56,7 +55,7 @@ int main() {
     printf("Highest salary: %.2f\n", highestSalary);
     printf("Lowest salary:  %.2f\n", lowestSalary);
 
-    // Search for a specific salary
+    // Search for a particular salary
     printf("\nEnter a salary to search for: ");
     scanf("%f", &searchSalary);
 
@@ -81,7 +80,7 @@ int main() {
     printf("  PART B: DEPARTMENT BUDGETS\n");
     printf("==============================================\n\n");
 
-    // Capture 10 department budgets
+    // Input 10 department budgets
     for (int i = 0; i < NUM_BUDGETS; i++) {
         printf("Enter budget for department %d: ", i + 1);
         scanf("%f", &budgets[i]);
@@ -93,7 +92,7 @@ int main() {
         printf("Department %2d: %.2f\n", i + 1, budgets[i]);
     }
 
-    // Calculate the total and average budget
+    // Compute the total and average budget
     for (int i = 0; i < NUM_BUDGETS; i++) {
         budgetTotal += budgets[i];
     }
@@ -128,7 +127,7 @@ int main() {
     printf("  PART C: VEHICLE REGISTRATION NUMBERS\n");
     printf("==============================================\n\n");
 
-    // Capture 20 registration numbers (no spaces; max 19 characters)
+    // Input 20 registration numbers (no spaces; max 19 characters)
     for (int i = 0; i < NUM_REGISTRATIONS; i++) {
         printf("Enter vehicle registration %d: ", i + 1);
         scanf("%19s", registrations[i]);
